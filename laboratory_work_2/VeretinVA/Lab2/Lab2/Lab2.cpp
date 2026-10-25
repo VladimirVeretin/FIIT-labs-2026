@@ -1,4 +1,6 @@
-﻿#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int mode1()
 {
@@ -71,6 +73,19 @@ int mode2()
 
 int main()
 {
-    int X;
-    X = mode2();
+    int mode;
+    printf("choose mode:\n");
+    printf("1 - you guess the number\n");
+    printf("2 - computer guesses your number\n");
+    scanf_s("%d", &mode);
+    switch (mode)
+    {
+    case 1:
+        mode1();
+        break;
+    case 2:
+        mode2();
+        break;
+    }
+    return 0;
 }
